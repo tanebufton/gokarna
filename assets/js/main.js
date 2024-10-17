@@ -110,7 +110,7 @@ function toggleTheme(event) {
 }
 
 function setTheme(themeToSet, targets) {
-    darkThemeCss.disabled = themeToSet === 'light';
+    darkThemeCss.disabled = themeToSet === 'dark';
     targets.forEach((target) => {
         target.querySelector('a').innerHTML = feather.icons[THEME_TO_ICON_CLASS[themeToSet].split('-')[1]].toSvg();
         target.querySelector(".dark-theme-toggle-screen-reader-target").textContent = [THEME_TO_ICON_TEXT_CLASS[themeToSet]];
